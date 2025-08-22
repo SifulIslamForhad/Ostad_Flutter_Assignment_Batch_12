@@ -1,4 +1,3 @@
-
 //----Zoo Management System
 
 
@@ -7,14 +6,108 @@ abstract class Animal{
   String _name;
   Animal(this._name);
 
-  void makeSound();
+   String makeSound();
 
   String getName(){
     return _name;
   }
 
+}
+
+
+//---------------------------------
+class Lion extends Animal{
+
+  String property;
+
+  Lion(
+      String _name,
+      this.property
+      ): super(_name);
+
+
+  @override
+  String makeSound() {
+    return 'Roar!';
+  }
+
+
+  void show_Lion(){
+
+    print('Name: ${getName()}');
+    print('Property: $property');
+    print('Sound: ${makeSound() }');
+
+  }
+
 
 }
+//---------------------------------
+
+
+
+//---------------------------------
+class Elephant extends Animal{
+
+  String property;
+
+  Elephant(
+      String name,
+      this.property
+      ): super(name);
+
+  @override
+  String makeSound() {
+    // TODO: implement makeSound
+    throw UnimplementedError();
+  }
+
+
+
+}
+//---------------------------------
+
+
+
+//---------------------------------
+class Parrot extends Animal{
+
+  String property;
+
+  Parrot(
+      String name,
+      this.property
+      ): super(name);
+
+  @override
+  String makeSound() {
+    // TODO: implement makeSound
+    throw UnimplementedError();
+  }
+
+
+
+
+}
+//---------------------------------
+
+
+
+
+
+
+main(){
+  print('');
+
+
+  Lion lion = Lion('Lion', 'Big Man');
+  lion.show_Lion();
+
+}
+
+
+
+
 
 
 
