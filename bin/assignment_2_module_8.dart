@@ -1,6 +1,8 @@
 //----Zoo Management System
 
 
+import 'dart:math';
+
 abstract class Animal{
 
   String _name;
@@ -15,7 +17,7 @@ abstract class Animal{
 }
 
 
-//---------------------------------
+//---------------------------------1
 class Lion extends Animal{
 
   String property;
@@ -28,12 +30,11 @@ class Lion extends Animal{
 
   @override
   String makeSound() {
-    return 'Roar!';
+    return 'Roar';
   }
 
 
-  void show_Lion(){
-
+  void display_Lion_info(){
     print('Name: ${getName()}');
     print('Property: $property');
     print('Sound: ${makeSound() }');
@@ -42,54 +43,60 @@ class Lion extends Animal{
 
 
 }
-//---------------------------------
+//---------------------------------1
 
 
 
-//---------------------------------
+//---------------------------------2
 class Elephant extends Animal{
 
   String property;
 
   Elephant(
-      String name,
+      String _name,
       this.property
-      ): super(name);
+      ): super(_name);
 
   @override
   String makeSound() {
-    // TODO: implement makeSound
-    throw UnimplementedError();
+    return 'Trumpet';
   }
 
-
+  display_Elephant_info(){
+    print('Name: $_name');
+    print('Property: $property');
+    print('Sound: ${makeSound()}');
+  }
 
 }
-//---------------------------------
+//---------------------------------2
 
 
 
-//---------------------------------
+//---------------------------------3
 class Parrot extends Animal{
 
   String property;
 
   Parrot(
-      String name,
+      String _name,
       this.property
-      ): super(name);
+      ): super(_name);
 
   @override
   String makeSound() {
-    // TODO: implement makeSound
-    throw UnimplementedError();
+    return 'Squawk! Hello!';
   }
 
+  display_Parrot_info(){
+    print('Name: $_name');
+    print('Property: $property');
+    print('Sound: ${makeSound()}');
 
-
+  }
 
 }
-//---------------------------------
+//---------------------------------3
 
 
 
@@ -99,9 +106,16 @@ class Parrot extends Animal{
 main(){
   print('');
 
-
   Lion lion = Lion('Lion', 'Big Man');
-  lion.show_Lion();
+  lion.display_Lion_info();
+
+  print('');
+  Elephant elephant = Elephant('Elephant', 'Big body');
+  elephant.display_Elephant_info();
+
+  print('');
+  Parrot parrot = Parrot('Parrot', 'Polly');
+  parrot.display_Parrot_info();
 
 }
 
