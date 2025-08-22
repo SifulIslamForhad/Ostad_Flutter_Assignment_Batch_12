@@ -21,7 +21,7 @@ Practice Week Assignment
 You are building a Zoo Management System.
 
 Create an abstract class Animal with:
-A private field _name (encapsulation)
+A private field _name (encapsulation)git add .
 A constructor to set the name
 An abstract method makeSound()
 A concrete method getName() to return the name
