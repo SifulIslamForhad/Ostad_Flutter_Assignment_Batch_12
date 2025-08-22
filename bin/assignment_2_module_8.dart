@@ -119,14 +119,14 @@ main(){
 
 
 
-  print('');
+  print('\n');
   List<String> ob_list_E = ['length: 2–3 meters', 'Age: 10 years', 'Weight: 5000 kg'];
   Elephant elephant = Elephant( 'Elephant', ob_list_E );
   elephant.display_Elephant_info();
 
 
 
-  print('');
+  print('\n');
   List<String> ob_list = ['size: 50–200 words', 'Age: 2 years', 'Weight: 1 kg'];
   Parrot parrot = Parrot( 'Parrot', ob_list );
   parrot.display_Parrot_info();
