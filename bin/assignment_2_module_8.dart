@@ -20,25 +20,27 @@ abstract class Animal{
 //---------------------------------1
 class Lion extends Animal{
 
-  String property;
+  List<String> property_list;
 
   Lion(
       String _name,
-      this.property
+      this.property_list
       ): super(_name);
 
 
   @override
   String makeSound() {
-    return 'Roar';
+    return 'Roar!';
   }
 
 
   void display_Lion_info(){
     print('Name: ${getName()}');
-    print('Property: $property');
+    print('Objects:');
+    for(var property in property_list){
+      print('-$property');
+    }
     print('Sound: ${makeSound() }');
-
   }
 
 
@@ -50,21 +52,26 @@ class Lion extends Animal{
 //---------------------------------2
 class Elephant extends Animal{
 
-  String property;
+  List<String> property_list;
 
   Elephant(
       String _name,
-      this.property
+      this.property_list
       ): super(_name);
+
+
 
   @override
   String makeSound() {
-    return 'Trumpet';
+    return 'Trumpet!';
   }
 
   display_Elephant_info(){
     print('Name: $_name');
-    print('Property: $property');
+    print('Objects:');
+    for(var property in property_list){
+      print('-$property');
+    }
     print('Sound: ${makeSound()}');
   }
 
@@ -76,11 +83,11 @@ class Elephant extends Animal{
 //---------------------------------3
 class Parrot extends Animal{
 
-  String property;
+  List<String> ob_list;
 
   Parrot(
       String _name,
-      this.property
+      this.ob_list
       ): super(_name);
 
   @override
@@ -90,9 +97,11 @@ class Parrot extends Animal{
 
   display_Parrot_info(){
     print('Name: $_name');
-    print('Property: $property');
+    print('Property:');
+    for(var property in ob_list){
+      print('-$property');
+    }
     print('Sound: ${makeSound()}');
-
   }
 
 }
@@ -101,20 +110,25 @@ class Parrot extends Animal{
 
 
 
-
-
 main(){
   print('');
 
-  Lion lion = Lion('Lion', 'Big Man');
+  List<String> ob_list_L = [ 'size: 25–30 cm', 'Age: 5 years', 'Weight: 190 kg' ];
+  Lion lion = Lion( 'Lion',  ob_list_L );
   lion.display_Lion_info();
 
-  print('');
-  Elephant elephant = Elephant('Elephant', 'Big body');
-  elephant.display_Elephant_info();
+
 
   print('');
-  Parrot parrot = Parrot('Parrot', 'Polly');
+  List<String> ob_list_E = ['length: 2–3 meters', 'Age: 10 years', 'Weight: 5000 kg'];
+  Elephant elephant = Elephant( 'Elephant', ob_list_E );
+  elephant.display_Elephant_info();
+
+
+
+  print('');
+  List<String> ob_list = ['size: 50–200 words', 'Age: 2 years', 'Weight: 1 kg'];
+  Parrot parrot = Parrot( 'Parrot', ob_list );
   parrot.display_Parrot_info();
 
 }
@@ -126,7 +140,7 @@ main(){
 
 
 
-/*
+/* assignment_2_module_8
 Practice Week Assignment
 You are building a Zoo Management System.
 
